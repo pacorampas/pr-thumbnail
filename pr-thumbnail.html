@@ -37,11 +37,28 @@ Example:
         width: 140px;
         height: 140px;
         overflow: hidden;
+        cursor: pointer;
       }
 
       :host img {
         width: 100%;
         height: auto;
+        opacity: 0.5;
+      }
+
+      :host[active] img {
+        opacity: 1;
+      }
+
+      :host:hover::before,
+      :host:active::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        border: 5px rgba(0,0,0,0.3) solid;
       }
 
       :host h1 {
@@ -80,7 +97,16 @@ Example:
             title: null,
             src: '../default-image.jpg'
           }
+        },
+        active: {
+          type: Boolean,
+          value: false,
+          notify: true
         }
+      },
+
+      listeners: {
+        'tap': '_handleTap'
       },
 
       // Element Lifecycle
@@ -97,6 +123,10 @@ Example:
             this.style.marginLeft = -w / 2+"px";
           }
         }
+      },
+
+      _handleTap: function() {
+        this.active = !this.active;
       },
 
       _haveTitle: function(img) {

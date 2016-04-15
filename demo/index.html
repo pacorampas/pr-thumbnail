@@ -23,7 +23,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     </pr-thumbnail>
 
     <pr-thumbnail
-        image='{"title": "", "src": "../messi2.jpg"}'>
+        image='{"title": "", "src": "../messi2.jpg"}' active>
     </pr-thumbnail>
 
     <pr-thumbnail
@@ -32,23 +32,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
     <pr-thumbnail>
     </pr-thumbnail>
-
-    <script>
-      var seedElement = document.querySelector('pr-thumbnail');
-
-      document.querySelector('#saybtn').addEventListener('click', function() {
-        alert(seedElement.sayHello('Hallo!'));
-      });
-
-      document.querySelector('#laserbtn').addEventListener('click', function() {
-        seedElement.fireLasers();
-      });
-
-      document.addEventListener("pr-thumbnail-lasers", function(e) {
-        console.log(e.detail.sound);
-      });
-
-    </script>
 
   </body>
 </html>
