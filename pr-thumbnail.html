@@ -41,8 +41,7 @@ Example:
       }
 
       :host * {
-        width: 100%;
-        height: auto;
+        pointer-events: none;
         opacity: 0.5;
       }
 
@@ -59,6 +58,11 @@ Example:
         bottom: 0;
         right: 0;
         border: 5px rgba(0,0,0,0.3) solid;
+      }
+
+      :host img {
+        width: 100%;
+        height: auto;
       }
 
       :host h1 {
