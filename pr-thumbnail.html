@@ -11,17 +11,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../polymer/polymer.html">
 
 <!--
-An element providing a solution to no problem in particular.
+An element to create a thumbnail
 
 Example:
 
-    <pr-thumbnail></pr-thumbnail>
+    <pr-thumbnail image="{{image}}" active></pr-thumbnail>
 
-Example:
-
-    <pr-thumbnail>
-      <h2>Hello pr-thumbnail</h2>
-    </pr-thumbnail>
+- image should contain in each position an object as:
+{src: "path/to/img.png", title: 'title of thumbnail'}
 
 @demo demo/index.html
 @hero hero.svg
@@ -92,8 +89,9 @@ Example:
 
       properties: {
         /**
-         * `fancy` indicates that the element should don a monocle and tophat,
-         * while checking its pocket watch.
+         * `fancy` image for showing. It should contain in each position an
+         * object as: {src: "path/to/img.png", title: 'title of thumbnail'}
+         *
          */
         image: {
           type: Object,
@@ -102,6 +100,10 @@ Example:
             src: '../default-image.jpg'
           }
         },
+        /**
+         * `active` indicates that this thumbnail is active
+         *
+         */
         active: {
           type: Boolean,
           value: false,

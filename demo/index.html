@@ -14,24 +14,28 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
     <title>pr-thumbnail Demo</title>
     <script src="../../webcomponentsjs/webcomponents-lite.min.js"></script>
+    <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
     <link rel="import" href="../pr-thumbnail.html">
   </head>
   <body unresolved>
 
-    <pr-thumbnail
-        image='{"title": "Celebración de Messi", "src": "../messi.jpg"}'>
-    </pr-thumbnail>
+    <demo-snippet class="centered-demo">
+      <template>
+        <pr-thumbnail
+            image='{"title": "Celebración de Messi", "src": "../messi.jpg"}'>
+        </pr-thumbnail>
 
-    <pr-thumbnail
-        image='{"title": "", "src": "../messi2.jpg"}' active>
-    </pr-thumbnail>
+        <pr-thumbnail
+            image='{"title": "", "src": "../messi2.jpg"}' active>
+        </pr-thumbnail>
 
-    <pr-thumbnail
-        image='{"title": "Hola", "src": ""}'>
-    </pr-thumbnail>
+        <pr-thumbnail
+            image='{"title": "Hola", "src": ""}'>
+        </pr-thumbnail>
 
-    <pr-thumbnail>
-    </pr-thumbnail>
-
+        <pr-thumbnail>
+        </pr-thumbnail>
+      </template>
+    </demo-snippet>
   </body>
 </html>
